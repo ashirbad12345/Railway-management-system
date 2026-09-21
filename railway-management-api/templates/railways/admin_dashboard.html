@@ -1,0 +1,46 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Railway Desk / Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'railways/app.css' %}">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Railway Desk home"><span class="brand-mark">RD</span><span>RAILWAY<br><b>DESK</b></span></a>
+      <div class="topbar-meta"><span class="pulse"></span><span>ADMIN CONSOLE</span><span class="divider"></span><span>DATABASE CONTROL</span></div>
+      <a class="login-trigger" href="/">User dashboard <span>↗</span></a>
+    </header>
+    <main>
+      <section class="hero admin-hero"><div class="hero-copy"><p class="kicker">OPERATIONS CONTROL <span>ADMIN</span></p><h1>Shape the<br><em>network.</em></h1><p class="hero-text">Create routes and update capacity. Every change is written directly to the railway inventory database.</p></div></section>
+      <section class="admin-layout">
+        <div class="account-panel admin-panel">
+          <div class="panel-heading light"><span>01 / ADD TRAIN</span><span class="mono">API KEY REQUIRED</span></div>
+          <form id="admin-form" class="admin-form">
+            <input id="admin-key" type="password" placeholder="Admin API key" autocomplete="off" required>
+            <input id="admin-number" placeholder="Train number (for example 12951)" required>
+            <input id="admin-name" placeholder="Train name" required>
+            <div class="admin-row"><input id="admin-source" placeholder="Source station" required><input id="admin-destination" placeholder="Destination station" required></div>
+            <input id="admin-seats" type="number" min="1" placeholder="Total seats" required>
+            <button class="primary-button full" type="submit">Add train <span>→</span></button>
+          </form>
+          <p class="form-message" id="admin-message" role="status"></p>
+        </div>
+        <div class="account-panel">
+          <div class="panel-heading light"><span>02 / TRAIN INVENTORY</span><button class="text-button" id="refresh-trains" type="button">Refresh ↻</button></div>
+          <div id="admin-trains"><div class="empty-state compact"><span>—</span><p>Loading trains from database...</p></div></div>
+        </div>
+      </section>
+    </main>
+    <footer><span>RAILWAY MANAGEMENT SYSTEM</span><span>ADMIN CONSOLE <b>•</b> v1.0</span></footer>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="{% static 'railways/admin.js' %}"></script>
+</body>
+</html>

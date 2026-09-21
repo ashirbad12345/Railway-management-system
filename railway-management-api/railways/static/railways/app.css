@@ -1,0 +1,57 @@
+:root {
+  --ink: #172321;
+  --muted: #687572;
+  --paper: #f5f6f1;
+  --panel: #ffffff;
+  --mint: #b9edca;
+  --mint-strong: #39b96b;
+  --line: #dce3dd;
+  --orange: #ff7859;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: Manrope, sans-serif; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.shell { max-width: 1240px; margin: auto; padding: 0 44px; }
+.topbar { align-items: center; border-bottom: 1px solid var(--line); display: flex; height: 88px; justify-content: space-between; }
+.brand { align-items: center; color: var(--ink); display: flex; font-size: 10px; font-weight: 800; gap: 10px; letter-spacing: .12em; line-height: 1.2; text-decoration: none; }
+.brand-mark { align-items: center; background: var(--ink); color: var(--mint); display: flex; font-size: 11px; height: 34px; justify-content: center; letter-spacing: -.06em; width: 34px; }
+.topbar-meta, .mono, .result-count, footer, .kicker { color: var(--muted); font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: .08em; }
+.topbar-meta { align-items: center; display: flex; gap: 12px; }
+.pulse { background: var(--mint-strong); border-radius: 50%; height: 7px; width: 7px; }
+.divider { background: var(--line); height: 16px; width: 1px; }
+.login-trigger, .text-button { background: none; border: 0; color: var(--ink); font-weight: 700; }
+.login-trigger span, .primary-button span { color: var(--orange); margin-left: 14px; }
+main { padding: 78px 0 90px; }
+.hero { display: flex; justify-content: space-between; min-height: 270px; }
+.kicker { margin: 0 0 20px; }
+.kicker span { color: var(--orange); margin-left: 14px; }
+h1, h2 { letter-spacing: -.07em; line-height: .98; margin: 0; }
+h1 { font-size: clamp(54px, 7vw, 92px); font-weight: 800; }
+h1 em { color: var(--mint-strong); font-style: normal; }
+.hero-text { color: var(--muted); font-size: 15px; line-height: 1.7; margin: 28px 0; max-width: 390px; }
+.route-art { height: 220px; margin: 18px 3% 0 0; position: relative; width: 330px; }
+.route-line { border-top: 1px solid var(--ink); left: 10px; position: absolute; right: 10px; top: 100px; transform: rotate(-15deg); }
+.station { background: var(--paper); border: 1px solid var(--ink); border-radius: 50%; font: 10px "DM Mono", monospace; padding: 15px 8px; position: absolute; top: 58px; }
+.station-a { left: 2px; }.station-b { right: 0; }.train-icon { color: var(--orange); font-size: 46px; left: 43%; position: absolute; top: 70px; transform: rotate(-15deg); }
+.search-panel { background: var(--ink); color: white; padding: 26px 30px 24px; }
+.train-picker { display: block; margin-bottom: 24px; max-width: 600px; }.train-picker span { color: #8b9b95; display: block; font: 10px "DM Mono", monospace; letter-spacing: .1em; margin-bottom: 9px; }.train-picker span b { color: var(--mint); font-weight: 400; margin-left: 14px; }.train-picker select { background: var(--ink); border: 0; border-bottom: 1px solid #53615c; color: white; outline: 0; padding: 11px 0; width: 100%; }.train-picker option { color: var(--ink); }
+.panel-heading { color: var(--mint); display: flex; font: 10px "DM Mono", monospace; justify-content: space-between; letter-spacing: .1em; margin-bottom: 28px; }
+.panel-heading .mono { color: #889793; }
+.search-form { align-items: end; display: flex; gap: 16px; }
+label { display: block; flex: 1; }.search-form label span, dialog label span { color: var(--muted); display: block; font: 10px "DM Mono", monospace; letter-spacing: .1em; margin-bottom: 9px; }
+.search-form label span { color: #8b9b95; }
+input { background: transparent; border: 0; border-bottom: 1px solid #53615c; border-radius: 0; color: inherit; outline: 0; padding: 11px 0; width: 100%; }
+input:focus { border-color: var(--mint); }.search-form input::placeholder { color: #8b9b95; }
+.swap { color: var(--orange); font-size: 20px; padding-bottom: 10px; }
+.primary-button { background: var(--mint); border: 0; color: var(--ink); font-weight: 800; min-height: 46px; padding: 0 20px; white-space: nowrap; }.primary-button:hover { background: #d2f5db; }.full { width: 100%; }
+.form-message { color: var(--orange); font-size: 12px; min-height: 18px; margin: 12px 0 0; }.search-panel .form-message { margin-bottom: -4px; }
+.results-section { padding-top: 72px; }.section-heading { align-items: end; display: flex; justify-content: space-between; margin-bottom: 25px; }.section-heading h2 { font-size: 38px; }.result-count { color: var(--muted); }
+.results { display: grid; gap: 12px; }.empty-state { align-items: center; border: 1px dashed #c8d1cb; color: var(--muted); display: flex; gap: 14px; justify-content: center; min-height: 150px; }.empty-state span { color: var(--mint-strong); font-size: 32px; }
+.account-grid { display: grid; gap: 18px; grid-template-columns: 1fr 1fr; padding-top: 72px; }.account-grid.single-panel { grid-template-columns: 1fr; }.account-panel { background: white; padding: 26px; }.admin-panel { background: #e7f5eb; }.panel-heading.light { align-items: center; color: var(--ink); margin-bottom: 22px; }.panel-heading.light .text-button { color: var(--ink); font: 10px "DM Mono", monospace; letter-spacing: .08em; }.booking-row { align-items: center; border-top: 1px solid var(--line); display: flex; justify-content: space-between; padding: 16px 0; }.booking-ref { font: 12px "DM Mono", monospace; }.booking-route { font-size: 12px; font-weight: 700; margin-top: 5px; }.booking-seats { color: var(--muted); font: 11px "DM Mono", monospace; }.compact { min-height: 100px; }.compact p { font-size: 12px; }.admin-form { display: grid; gap: 12px; }.admin-form input { background: transparent; border-bottom-color: #a9c7b1; color: var(--ink); padding: 10px 0; }.admin-form input::placeholder { color: #73887b; }.admin-row { display: flex; gap: 18px; }.admin-row input { min-width: 0; }.admin-panel .form-message { min-height: 14px; }
+.admin-layout { display: grid; gap: 18px; grid-template-columns: .8fr 1.2fr; }.admin-hero { min-height: 245px; }
+.train-card { align-items: center; background: var(--panel); border-left: 4px solid var(--mint-strong); display: grid; gap: 18px; grid-template-columns: 1.3fr 1fr .7fr auto; padding: 23px 25px; }.train-name { font-size: 18px; font-weight: 800; }.route-label { color: var(--muted); font: 11px "DM Mono", monospace; margin-top: 5px; text-transform: uppercase; }.seat-number { font-size: 25px; font-weight: 800; }.seat-number.low { color: var(--orange); }.seat-label { color: var(--muted); font: 10px "DM Mono", monospace; }.book-button { background: var(--ink); border: 0; color: white; min-height: 40px; padding: 0 18px; }.book-button:disabled { background: #b9c2be; cursor: not-allowed; }
+footer { border-top: 1px solid var(--line); display: flex; justify-content: space-between; padding: 24px 0 30px; } footer b { color: var(--orange); padding: 0 7px; }
+dialog { border: 0; box-shadow: 0 20px 70px #17232133; color: var(--ink); max-width: 410px; padding: 38px; width: calc(100% - 36px); } dialog::backdrop { background: #17232199; backdrop-filter: blur(4px); }.close-dialog { background: none; border: 0; font-size: 28px; position: absolute; right: 17px; top: 9px; }.dialog-eyebrow { color: var(--orange); font: 10px "DM Mono", monospace; letter-spacing: .1em; margin-bottom: 18px; } dialog h2 { font-size: 34px; } dialog p { color: var(--muted); font-size: 13px; line-height: 1.6; margin: 12px 0 25px; } dialog label { margin-bottom: 20px; }.hidden { display: none !important; }.text-button { display: block; font-size: 12px; margin: 19px auto 0; text-decoration: underline; }.toast { background: var(--ink); bottom: 24px; color: white; opacity: 0; padding: 15px 20px; pointer-events: none; position: fixed; right: 24px; transform: translateY(12px); transition: .25s; }.toast.show { opacity: 1; transform: translateY(0); }
+@media (max-width: 700px) { .shell { padding: 0 20px; }.topbar-meta { display: none; } main { padding-top: 52px; }.hero { min-height: 0; }.route-art { display: none; }.search-form { align-items: stretch; flex-direction: column; gap: 18px; }.swap { display: none; }.search-form .primary-button { margin-top: 8px; }.train-card { grid-template-columns: 1fr 1fr; }.train-card .book-button { grid-column: 1 / -1; }.section-heading h2 { font-size: 32px; }.account-grid, .admin-layout { grid-template-columns: 1fr; }.admin-row { flex-direction: column; gap: 12px; } footer { display: block; line-height: 2.2; } }
